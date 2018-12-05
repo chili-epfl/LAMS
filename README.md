@@ -21,6 +21,8 @@ To reproduce the database, type in the PostgreSQL interactive terminal:
 ```bash
 $ pg_dump db_name < lamsdb.dump
 ```
+![schema image](schema.png)
+
 ### DB Tables
 <ul>
     <li> sequences(id, title, user_id, length, total_activities)</li>
@@ -32,6 +34,8 @@ $ pg_dump db_name < lamsdb.dump
 Learning designs are stored in the table sequences and the lenght attribute refers to the main sequence of the lesson as this is displayed in Preview Mode. In table subsequences, both the main sequence and the sub-sequences of a lesson are stored. The parent_id refers to the complex activity that causes the creation of a sub-sequence ad it is used for retrieving all the possible paths within a lesson without requiring joins with other tables. Information about the Learning activities is stored in the remaining tables. The activities_info table is used for storing the content of Tool Activities in jsonb format.
 
 ### Statistics
+
+Most common acitvity types and their frequency
 
 |              type              | frequency|
 --------------------------------|-----------
@@ -49,7 +53,6 @@ Learning designs are stored in the table sequences and the lenght attribute refe
 | CONDITION_GATE_ACTIVITY_TYPE   |        34|
 | OPTIONS_WITH_SEQUENCES_TYPE    |        29|
    
-Most common tool types and their frequency
 
 ### Sample queries
 
