@@ -19,7 +19,7 @@ There are detailed descriptions about activities in [user documentation](https:/
 To reproduce the database, type in the PostgreSQL interactive terminal:
 
 ```bash
-$ pg_dump db_name < lamsdb.dump
+$ psql db_name < lamsdb.dump
 ```
 ![schema image](schema.png)
 
